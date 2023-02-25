@@ -77,7 +77,9 @@ function saveOPtion(){
     let obj= {id: td1.innerText, student_name: inp2.value, student_roll: inp3.value, subject: inp4.value, marks: inp5.value, markedBy: inp6.value};
 
     tableData.push(obj);
-    console.log(tableData);
+    console.log("new row :",obj);
+
+    console.log("tableData array :",tableData);
     
     td7.innerHTML=null
 
