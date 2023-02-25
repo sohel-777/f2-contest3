@@ -1,0 +1,84 @@
+let tableData=[];
+ const addRow=document.querySelector(".createRow") ;
+ const tbl=document.querySelector("tbody");
+ let id=1;
+ let btn=document.createElement("button")
+  function addElement(){
+    // alert("aaaa");
+    let tr=document.createElement("tr");
+
+    let td1=tr.appendChild(document.createElement('td'));
+    let td2=tr.appendChild(document.createElement('td'));
+    let td3=tr.appendChild(document.createElement('td'));
+    let td4=tr.appendChild(document.createElement('td'));
+    let td5=tr.appendChild(document.createElement('td'));
+    let td6=tr.appendChild(document.createElement('td'));
+    let td7=tr.appendChild(document.createElement('td'));
+
+   
+   btn.innerText="save";
+
+   let inp2=document.createElement("input")
+   inp2.type='text'
+   inp2.classList.add('adjust')
+
+  
+   
+   
+   let inp3=document.createElement("input")
+   inp3.type='number'
+   inp3.classList.add('adjust')
+   
+   let inp4=document.createElement("input")
+   inp4.type='text'
+   inp4.classList.add('adjust')
+   
+   let inp5=document.createElement("input")
+   inp5.type='number'
+   inp5.classList.add('adjust')
+
+   let inp6=document.createElement("input")
+   inp6.type='email'
+   inp6.classList.add('adjust')
+
+    td1.innerHTML=id;
+    td2.appendChild(inp2)
+    td3.appendChild(inp3)
+    td4.appendChild(inp4)
+    td5.appendChild(inp5)
+    td6.appendChild(inp6)
+    td7.appendChild(btn)
+   
+    tbl.append(tr);
+
+id++
+
+
+
+function saveOPtion(){
+    inp2.readOnly='true'
+    inp3.readOnly='true'
+    inp4.readOnly='true'
+    inp5.readOnly='true'
+    inp6.readOnly='true'
+
+    let obj= {id: td1.innerText, student_name: inp2.value, student_roll: inp3.value, subject: inp4.value, marks: inp5.value, markedBy: inp6.value};
+
+    if(tableData.length==0){
+        tableData.push(obj);
+
+    }
+     if(tableData.length>0 && tableData[tableData.length-1].id != obj.id ){
+        tableData.push(obj);
+
+     }
+    
+    console.log(tableData);
+    
+}
+btn.addEventListener('click', saveOPtion)
+
+  }
+  addRow.addEventListener("click", addElement );
+
+  

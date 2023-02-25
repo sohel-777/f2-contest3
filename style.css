@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.createRow{
+    margin: 30px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 90%;
+    margin-bottom: 2px solid black;
+    border: 1px solid black;
+}
+th{
+    border-bottom: 2px solid black;
+    border-right: 1px solid black;
+    padding: 10px 15px;
+}
+tbody tr td{
+    border-right: 1px solid black;
+    text-align: center;
+    
+    height: 30px;
+}
+.adjust{
+    height: 100%;
+    width: 100%;
+   
+    
+}
