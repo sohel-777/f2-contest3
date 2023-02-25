@@ -2,7 +2,7 @@ let tableData=[];
  const addRow=document.querySelector(".createRow") ;
  const tbl=document.querySelector("tbody");
  let id=1;
- 
+
   function addElement(){
     // alert("aaaa");
     let tr=document.createElement("tr");
@@ -18,6 +18,7 @@ let tableData=[];
  let btn=document.createElement("button")
    btn.style.backgroundColor='black'
    btn.style.color='white'
+   btn.style.padding='5px'
    btn.innerText="save";
 
    let inp2=document.createElement("input")
@@ -27,18 +28,22 @@ let tableData=[];
 
    let inp3=document.createElement("input")
    inp3.type='text'
+   inp3.required='true'
    inp3.classList.add('adjust')
    
    let inp4=document.createElement("input")
    inp4.type='text'
+   inp4.required='true'
    inp4.classList.add('adjust')
    
    let inp5=document.createElement("input")
    inp5.type='number'
+   inp5.required='true'
    inp5.classList.add('adjust')
 
    let inp6=document.createElement("input")
    inp6.type='email'
+//    inp6.required='true'
    inp6.classList.add('adjust')
 
     td1.innerHTML=id;
@@ -56,7 +61,11 @@ id++
 
 
 function saveOPtion(){
-    inp2.readOnly='true' 
+
+    if(inp2.value=="" || inp3.value=="" || inp4.value=="" || inp5.value==""|| inp6.value==""){
+        alert("YOU CANT SAVE EMPTY VALUE")
+    }else{
+        inp2.readOnly='true' 
     inp3.readOnly='true'
     inp4.readOnly='true'
     inp5.readOnly='true'
@@ -64,16 +73,10 @@ function saveOPtion(){
    
     let obj= {id: td1.innerText, student_name: inp2.value, student_roll: inp3.value, subject: inp4.value, marks: inp5.value, markedBy: inp6.value};
 
-    if(tableData.length==0){
-        tableData.push(obj);
+    tableData.push(obj);
+    console.log(tableData);
 
     }
-     if(tableData.length>0 && tableData[tableData.length-1].id != obj.id ){
-        tableData.push(obj);
-
-     }
-     console.clear()
-    console.log(tableData);
     
     
 }
