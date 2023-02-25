@@ -24,6 +24,7 @@ let tableData=[];
    let inp2=document.createElement("input")
    inp2.type='text'
    inp2.required='true'
+   
    inp2.classList.add('adjust')
 
    let inp3=document.createElement("input")
@@ -63,7 +64,7 @@ id++
 function saveOPtion(){
 
     if(inp2.value=="" || inp3.value=="" || inp4.value=="" || inp5.value==""|| inp6.value==""){
-        alert("YOU CANT SAVE EMPTY VALUE")
+        alert("Please fill in all fields before saving.")
     }else{
         inp2.readOnly='true' 
     inp3.readOnly='true'
