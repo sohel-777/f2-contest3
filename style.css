@@ -39,6 +39,7 @@ tbody tr td{
 .adjust{
     height: 100%;
     width: 100%;
-    
-    
+    border: none;
+    outline: none;
+    text-align: center;
 }

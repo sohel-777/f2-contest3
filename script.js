@@ -65,6 +65,8 @@ function saveOPtion(){
 
     if(inp2.value=="" || inp3.value=="" || inp4.value=="" || inp5.value==""|| inp6.value==""){
         alert("Please fill in all fields before saving.")
+    }else if (inp6.value.includes("@") == false) {
+        alert("Please Enter valid Email")
     }else{
         inp2.readOnly='true' 
     inp3.readOnly='true'
@@ -76,6 +78,8 @@ function saveOPtion(){
 
     tableData.push(obj);
     console.log(tableData);
+    
+    td7.innerHTML=null
 
     }
     
