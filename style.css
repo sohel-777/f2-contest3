@@ -2,9 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
+.heading{
+    background-color: black;
+    height: 10vh;
+    color: white;
+    font-size: 30px;
+    padding:  20px;
+}
+
 .createRow{
-    margin: 30px;
+    margin: 30px  80px;
     background-color: black;
     color: white;
     padding: 5px 10px;
@@ -30,6 +39,6 @@ tbody tr td{
 .adjust{
     height: 100%;
     width: 100%;
-   
+    
     
 }

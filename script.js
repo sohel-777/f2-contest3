@@ -2,7 +2,7 @@ let tableData=[];
  const addRow=document.querySelector(".createRow") ;
  const tbl=document.querySelector("tbody");
  let id=1;
- let btn=document.createElement("button")
+ 
   function addElement(){
     // alert("aaaa");
     let tr=document.createElement("tr");
@@ -15,18 +15,18 @@ let tableData=[];
     let td6=tr.appendChild(document.createElement('td'));
     let td7=tr.appendChild(document.createElement('td'));
 
-   
+ let btn=document.createElement("button")
+   btn.style.backgroundColor='black'
+   btn.style.color='white'
    btn.innerText="save";
 
    let inp2=document.createElement("input")
    inp2.type='text'
+   inp2.required='true'
    inp2.classList.add('adjust')
 
-  
-   
-   
    let inp3=document.createElement("input")
-   inp3.type='number'
+   inp3.type='text'
    inp3.classList.add('adjust')
    
    let inp4=document.createElement("input")
@@ -56,12 +56,12 @@ id++
 
 
 function saveOPtion(){
-    inp2.readOnly='true'
+    inp2.readOnly='true' 
     inp3.readOnly='true'
     inp4.readOnly='true'
     inp5.readOnly='true'
     inp6.readOnly='true'
-
+   
     let obj= {id: td1.innerText, student_name: inp2.value, student_roll: inp3.value, subject: inp4.value, marks: inp5.value, markedBy: inp6.value};
 
     if(tableData.length==0){
@@ -72,8 +72,9 @@ function saveOPtion(){
         tableData.push(obj);
 
      }
-    
+     console.clear()
     console.log(tableData);
+    
     
 }
 btn.addEventListener('click', saveOPtion)
